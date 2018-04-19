@@ -49,7 +49,7 @@ def safe_string(data):
         data = escape(data)
     return data
 
-
 def max_rid(xml):
-    _re = re.compile(r'rId+[0-9]{1,}')
+    _re = re.compile(r'rId\d+')
     return int(max(_re.findall(xml)).replace('rId', ''))
+    
